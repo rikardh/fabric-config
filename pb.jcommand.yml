@@ -1,0 +1,19 @@
+---
+# JUNOS command playbook
+
+- name: Run JUNOS command 
+  hosts: "{{ host }}"
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Running a JUNOS command(s) on host(s) {{ hosts }}
+      junos_command:
+        host: "{{ ansible_host }}"
+        username: "{{ login_name }}"
+        password: "{{ login_password }}"
+        commands: show lldp neighbor
+        #wait_for: "result[0] contains Junos"
+        display: text
+      register: result
+    - debug: var=result.stdout_lines

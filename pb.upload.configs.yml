@@ -1,0 +1,9 @@
+---
+# Main playbook for lab-config
+# To run this playbook you need to specify "-e hosts=<host, group name or 'all'>"
+- name: Upload and commit configs for the lab setup
+  hosts: "{{ device }}"
+  connection: local
+  gather_facts: no
+  roles:
+    - upload-configs

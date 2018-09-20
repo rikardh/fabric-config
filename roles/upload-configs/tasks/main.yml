@@ -1,0 +1,23 @@
+---
+# Uploads and OVERWRITES your entire assembled config
+  - name: Uploading and OVERWRITING configurations to devices. commit confirmed 5 minutes.
+    tags: no-commit-confirmed
+    junos_config:
+      host: "{{ ansible_host }}"
+#      confirm: "5"
+      src: "configs/{{ inventory_hostname }}.conf"
+      update: "override"
+      timeout: "60"
+      username: "{{ login_name }}"
+      password: "{{ login_password }}"
+      src_format: "text"
+
+#  - name: Committing configurations
+#    junos_config:
+#      confirm_commit: yes
+#      host: "{{ ansible_host }}"
+#      timeout: "60"
+#      user: "{{ login_name }}"
+#      passwd: "{{ login_password }}"
+#    notify: remove-device-config
+

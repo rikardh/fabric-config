@@ -1,0 +1,54 @@
+host_name: qfx10002-r01-04 
+
+# <ip>/<prefix>
+management_interface_ip: 172.30.104.101/23
+
+# <ip>
+lo0_ip: 10.255.253.101
+
+# all inet interfaces <ip>/<prefix>
+inet_interfaces:
+  - name: et-0/0/0
+    ip_address: 10.255.3.6/31
+    description: qfx5100-r01-06
+  - name: et-0/0/1
+    ip_address: 10.255.3.2/31
+    description: qfx5100-r01-07
+  - name: et-0/0/2
+    ip_address: 10.255.3.10/31
+    description: qfx5110-r01-01
+  - name: et-0/0/3
+    ip_address: 10.255.3.14/31
+    description: qfx5200-r01-01
+  - name: et-0/0/34
+    ip_address: 10.255.3.17/31
+    description: qfx10002-r01-03
+  - name: et-0/0/35
+    ip_address: 10.255.3.19/31
+    description: qfx10002-r01-03
+
+# all interfaces used for underlay
+underlay_inet_interfaces:
+  - et-0/0/0
+  - et-0/0/1
+  - et-0/0/2
+  - et-0/0/3
+  - et-0/0/34
+  - et-0/0/35
+
+#ae_interfaces:
+#  - name: ae0
+#    description: my interface
+#    esi: 00:00:11:11:22:22:33:33:44:44
+#    mode: all-active
+#    ae_members:
+#      - ge-0/0/0
+#      - ge-0/0/1
+#  - name: ae1
+#    description: your interface
+#    esi: 00:00:11:11:22:22:33:33:44:45
+#    mode: all-active
+#    ae_members:
+#      - ge-0/0/2
+#      - ge-0/0/3
+
