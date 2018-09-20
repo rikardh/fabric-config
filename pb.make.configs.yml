@@ -10,6 +10,7 @@
   roles:
     - clean-files
     - common
+    - contrail-command-fix
     - underlay-ospf
 #    - evpn-ibgp
 #    - vxlan-qfx
