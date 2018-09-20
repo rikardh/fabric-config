@@ -1,8 +1,8 @@
 ---
 # Upgrade Junos device
-# To run this playbook you need to specify "-e hosts=<host, group name or 'all'>"
+# To run this playbook you need to specify "-e device=<host, group name or 'all'>"
 - name: Upgrade devices
-  hosts: "{{ hosts }}"
+  hosts: "{{ device }}"
   connection: local
   gather_facts: no
   roles:
