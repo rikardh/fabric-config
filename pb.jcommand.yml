@@ -5,7 +5,8 @@
   hosts: "{{ host }}"
   connection: local
   gather_facts: no
-
+  vars_files:
+    - vars_credentials.yml
   tasks:
     - name: Running a JUNOS command(s) on host(s) {{ hosts }}
       junos_command:

@@ -5,8 +5,6 @@
   hosts: "{{ device }}"
   connection: local
   gather_facts: no
-  vars_files:
-    - vars_credentials.yaml
   roles:
     - clean-files
     - common

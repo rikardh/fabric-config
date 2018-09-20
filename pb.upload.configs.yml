@@ -7,3 +7,6 @@
   gather_facts: no
   roles:
     - upload-configs
+  vars_files:
+    - vars_credentials.yml
+
