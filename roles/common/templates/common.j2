@@ -21,6 +21,7 @@ system {
     }
     commit persist-groups-inheritance;
     login {
+        message "Stolab device -{{ host_name }}-";
         {% for user in users %}
         user {{ user.name }} {
             class super-user;
